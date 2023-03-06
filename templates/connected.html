@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel = "stylesheet" href="{{ url_for('static', filename ='css/main.css')}}">
+    <title>Bottle processing </title>
+   <script language="javascript">
+setTimeout(function(){
+   window.location.reload(1);
+}, 500);
+</script>
+</head>
+<body>
+<div id="centered">
+    <h1>processed images:</h1>
+    <img id='hiddenimage1' src = '{{url_for("image_feed")}}' >
+    <img  src="data:image/jpeg;base64,{{ img_data1 }}" >
+    <p>bottle count: {{ count }}</p>
+</div>
+
+</body>
+</html>

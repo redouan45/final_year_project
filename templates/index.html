@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel = "stylesheet" href="{{ url_for('static', filename ='css/main.css')}}">
+    <title>Connect to plc</title>
+</head>
+<body >
+<div id="index_form">
+    <h1>Connect to a local plc</h1>
+    <form action ="/" method="POST">
+        <p>Ip Adress:</p>
+        <input type="text" id="ip_adress" name="ip_adress" value="192.168.0.1" minlength="7" maxlength="15" size="15" >
+        <br>
+        <p>Rack:</p>
+        <select name="rack_selector"  class="selectors">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+        </select>
+        <br>
+        <p>Cpu Slot:</p>
+        <select name="cpu_slot_selector" class="selectors">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+        </select>
+        <input type="submit" id="submit_btn" value="Connect" >
+
+</div>
+
+    </form>
+</body>
+</html>
